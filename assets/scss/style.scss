@@ -1,6 +1,5 @@
-@import 'normalize';
+@use "../../libsyarn/normalize.css/normalize";
 
-@import 'presets/skins';
-@import 'presets/variables';
+@use "presets";
 
-@import 'common';
+@use "common";

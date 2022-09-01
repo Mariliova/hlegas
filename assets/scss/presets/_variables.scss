@@ -1,4 +1,11 @@
-$ul: 1280px;
-$lg: 992px;
+$ul: 1360px;
+$lg: 1280px;
+$md: 992px;
+$sm: 768px;
+$xs: 576px;
 
 $gap: 20px;
+$gap-sm: $gap * 0.5;
+
+$font-size: 16px;
+$font-primary: "TT Norms", sans-serif;
