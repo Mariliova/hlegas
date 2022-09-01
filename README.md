@@ -1,0 +1,1 @@
+[![HTML CSS valid](https://github.com/Mariliova/hlegas/actions/workflows/HTML5Validator.yml/badge.svg)](https://github.com/Mariliova/hlegas/actions/workflows/HTML5Validator.yml)
