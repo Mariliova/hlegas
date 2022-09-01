@@ -1,0 +1,11 @@
+{
+  "name": "hlegas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Mariliova/hlegas.git",
+  "author": "Mariliova <mashuha1698@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
