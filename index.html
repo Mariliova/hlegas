@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,63 @@
   <title>Document</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-  
+
+  <header class="page-header">
+    <div class="page-header__grid">
+      <div class="page-header__logo logo">
+        <img class="logo__img" src="assets/img/logoMini.svg" alt="hlegas logo">
+      </div>
+      <nav class="page-header__menu menu">
+        <div class="menu__btn">
+          <span class="menu__btn-row"></span>
+          <span class="menu__btn-row"></span>
+          <span class="menu__btn-row"></span>
+        </div>
+
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__link active" href="#">про нас</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">послуги</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">команда</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">публікації</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">контакти</a></li>
+        </ul>
+      </nav>
+      <nav class="page-header__actions actions">
+        <div class="actions__languages">
+          <a class="actions__languages-link" href="#">УК</a>
+          <a class="actions__languages-link" href="#">РУ</a>
+          <a class="actions__languages-link" href="#">EN</a>
+        </div>
+
+        <address class="actions__locations">
+          <a class="actions__location" href="#">Одеса, Адміральський пр., 3</a>
+        </address>
+
+        <div class="actions__numbers">
+          <a class="actions__number" href="tel:+380503901591">+38 (050) 390 15 91</a>
+        </div>
+
+        <div class="actions__socials">
+          <a class="actions__social" href="#">
+            <img class="actions__social-img" src="assets/img/facebok.svg" alt="facebook">
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="page-header__content">
+      <img class="page-header__content-img" src="assets/img/hero.svg" alt="symbol long leg">
+      <h1 class="page-header__content-title">системний адміністратор правових рішень</h1>
+    </div>
+    <div class="page-header__button">
+      <img class="page-header__button-img" src="assets/img/scroll.svg" alt="scroll">
+    </div>
+
+  </header>
+
   <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
