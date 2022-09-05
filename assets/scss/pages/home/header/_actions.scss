@@ -3,9 +3,20 @@
 
 .actions {
   display: flex;
-  justify-content: flex-end;
+
   align-items: center;
   gap: $gap;
+
+  @include sm-min {
+    justify-content: flex-end;
+  }
+
+  @include sm {
+    justify-content: space-between;
+    a {
+      color: $color-gray-text;
+    }
+  }
 
   &__languages {
     font-weight: 700;
@@ -22,6 +33,7 @@
 
       &.active {
         background-color: $color-accent;
+        color: $color-white;
       }
     }
   }
@@ -29,6 +41,10 @@
   &__locations {
     font-style: normal;
     font-size: 16px;
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__numbers {
@@ -38,5 +54,9 @@
 
   &__socials {
     margin-left: 5px;
+
+    @include sm {
+      display: none;
+    }
   }
 }
