@@ -1,2 +1,94 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
+
+.page-header {
+  position: relative;
+  background: linear-gradient($bg-gradient-1);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    background-image: url(../img/letters.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 85vh;
+    @include abs-position;
+  }
+
+  &::after {
+    content: "";
+    background: linear-gradient(180deg,
+      rgba(50, 50, 100, 0) 16.67%,
+      #323264 100%);
+    @include abs-position(70%);
+  }
+
+  &__grid {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: grid;
+    gap: $gap;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "logo actions""logo menu";
+
+    padding-top: 50px;
+
+    @extend %container;
+
+    // @include {
+
+    // }
+  }
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__actions {
+    grid-area: actions;
+  }
+
+  &__content {
+    @extend %container;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-img {
+      position: absolute;
+      bottom: 0;
+      transform: scale(1.2);
+    }
+
+    &-title {
+      position: relative;
+      font-size: 38px;
+      line-height: 45px;
+      font-weight: 500;
+      text-align: center;
+      color: $color-white;
+
+      padding: $gap;
+      max-width: 650px;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    position: absolute;
+    bottom: $gap;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+}
