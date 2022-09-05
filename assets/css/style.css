@@ -212,6 +212,10 @@ html {
   font-size: 16px;
 }
 
+body {
+  line-height: 1.2;
+}
+
 a {
   text-decoration: none;
 
@@ -310,7 +314,6 @@ a {
 
   font-size: 38px;
   font-weight: 500;
-  line-height: 45px;
 }
 .page-header__button {
   position: absolute;
@@ -362,7 +365,6 @@ a {
 
   font-size: 12px;
   font-weight: 700;
-  line-height: 14px;
 
   gap: 2px;
 }
@@ -377,12 +379,10 @@ a {
 .actions__locations {
   font-size: 16px;
   font-style: normal;
-  line-height: 19px;
 }
 .actions__numbers {
   font-size: 16px;
   font-weight: 700;
-  line-height: 19px;
 }
 .actions__socials {
   margin-left: 5px;
