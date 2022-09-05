@@ -354,11 +354,17 @@ a {
   gap: 20px;
 }
 .actions__languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
   letter-spacing: 1px;
 
   font-size: 12px;
   font-weight: 700;
   line-height: 14px;
+
+  gap: 2px;
 }
 .actions__languages-link {
   padding: 6px 5px;
