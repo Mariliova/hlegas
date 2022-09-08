@@ -1,0 +1,20 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.experience {
+  background-color: $color-primary;
+
+  @include md-min {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include md {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__container {
+    @extend %container;
+  }
+}

@@ -11,13 +11,11 @@ $color-active-active: #006ccf;
 $color-bg-gray: #f5f5fa;
 $color-bg-gray-alt: #ededf7;
 
-$color-gray-text: #b3b3da;
+$color-gray-text: #b3b3ba;
 $color-gray-separator: #e6e6f0;
 
 $color-white: #ffffff;
 $color-black: #000000;
 
-$bg-gradient-1: 42deg,
-$color-primary 15%,
-$color-primary 50%,
-#7A425E 88%;
+$bg-gradient-1: 42deg, $color-primary 15%, $color-primary 50%, #7a425e 88%;
+$bg-gradient-2: 90deg, #ef8080 0%, $color-accent 100%;

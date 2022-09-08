@@ -1,0 +1,164 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.slider {
+  display: flex;
+
+  @include md-min {
+    gap: $gap * 4;
+  }
+
+  @include md {
+    flex-direction: column;
+  }
+
+  &__headers {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    flex-basis: 0;
+    flex-grow: 2;
+
+    &::after {
+      content: "";
+
+      @include md-min {
+        position: absolute;
+        right: -42px;
+        width: 4px;
+        height: 100%;
+        background-color: $color-gray-separator;
+      }
+
+      @include md {
+        display: none;
+      }
+
+    }
+  }
+
+  &__header {
+    position: relative;
+    color: $color-gray-text;
+
+
+    @include md-min {
+      text-align: right;
+      font-size: 42px;
+    }
+
+    @include md {
+      display: none;
+    }
+
+    &.active {
+      @include md {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      &::after {
+        content: "";
+
+        @include md-min {
+          position: absolute;
+          top: 0;
+          right: -42px;
+          z-index: 1;
+          width: 4px;
+          height: 100%;
+          background-color: $color-accent;
+        }
+
+        @include md {
+          display: none;
+        }
+
+      }
+    }
+  }
+
+  &__span {
+    background: linear-gradient($bg-gradient-2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+  }
+
+  &__notes {
+    display: flex;
+    align-items: center;
+    flex-basis: 0;
+    flex-grow: 3;
+
+  }
+
+  &__note {
+    display: none;
+
+    &.active {
+      display: block;
+      color: $color-white;
+      @include md-min {
+         max-width: 600px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include md-min {
+      font-size: 32px;
+    }
+
+    @include md {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__description {
+    @include md-min {
+      font-size: 21px;
+      line-height: 1.43;
+    }
+
+    @include md {
+      font-size: 18px;
+      line-height: 1.44;
+      margin-bottom: $gap;
+    }
+  }
+
+  &__indicators {
+    @include md-min {
+      display: none;
+    }
+
+    @include md {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+    }
+  }
+
+  &__indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: $color-active-regular;
+    opacity: 0.2;
+
+    &.active {
+      opacity: 1;
+    }
+
+  }
+
+}
