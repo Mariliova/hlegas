@@ -68,12 +68,11 @@
 
   &__list {
     @include unlist;
-
     @include sm-min {
       display: flex;
+
       gap: 15px;
     }
-
     @include sm {
       display: none;
     }

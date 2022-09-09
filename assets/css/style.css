@@ -190,6 +190,7 @@ template {
   src: url("TTNorms-Regular.eot");
   src: local("TT Norms Regular"), local("TTNorms-Regular"), url("../fonts/TTNorms-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-Regular.woff2") format("woff2"), url("../fonts/TTNorms-Regular.woff") format("woff"), url("../fonts/TTNorms-Regular.ttf") format("truetype");
 }
+.services__container,
 .experience__container,
 .page-header__grid,
 .page-header__content {
@@ -469,9 +470,9 @@ a {
   content: "";
 }
 .slider__span {
-  background: -webkit-gradient(linear, left top, right top, from(#ef8080), to(#f0145a));
-  background: -o-linear-gradient(left, #ef8080 0%, #f0145a 100%);
-  background:    linear-gradient(90deg, #ef8080 0%, #f0145a 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #ef8080), to(#f0145a));
+  background: -o-linear-gradient(left, #ef8080 0, #f0145a 100%);
+  background:    linear-gradient(90deg, #ef8080 0, #f0145a 100%);
   -webkit-background-clip: text;
           background-clip: text;
 
@@ -492,12 +493,17 @@ a {
   flex-grow: 3;
 }
 .slider__note {
-  display: none;
+  position: absolute;
+  z-index: -9999;
+
+  opacity: 0;
+  color: #ffffff;
 }
 .slider__note.active {
-  display: block;
+  position: static;
+  z-index: inherit;
 
-  color: #ffffff;
+  opacity: 1;
 }
 .slider__title {
   margin-bottom: 20px;
@@ -515,9 +521,103 @@ a {
 }
 
 .experience {
+  margin-top: -1px;
+
   background-color: #323264;
 }
+.services {
+  position: relative;
 
+  margin-top: -1px;
+
+  border-radius: 0 0 12px 12px;
+  background: -o-linear-gradient(250deg, #323264 10%, #323264 55%, #643e72 90%);
+  background:    linear-gradient(200deg, #323264 10%, #323264 55%, #643e72 90%);
+}
+.services::before {
+  position: absolute;
+  top: 100%;
+  right: 40px;
+  bottom: 0;
+  left: 40px;
+
+  height: 20px;
+
+  content: "";
+
+  border-radius: 0 0 12px 12px;
+  background-color: #e7e7f2;
+}
+.services::after {
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+
+  height: 10px;
+
+  content: "";
+
+  border-radius: 0 0 12px 12px;
+  background-color: #cacadb;
+}
+.services__page-link {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+  color: #ffffff;
+
+  font-size: 14px;
+}
+.services__title {
+  line-height: 1.2;
+}
+.services__title-span {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #f0145a), to(#ef8080));
+  background: -o-linear-gradient(left, #f0145a 0, #ef8080 100%);
+  background:    linear-gradient(90deg, #f0145a 0, #ef8080 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+}
+
+.services__grid {
+  display: grid;
+}
+
+.card {
+  max-width: 405px;
+}
+.card__title {
+  color: #24a3ff;
+
+  grid-area: ttl;
+}
+.card__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  border-radius: 24px;
+  background-color: #ffffff;
+
+  grid-area: icon;
+}
+.card__description {
+  color: #ffffff;
+
+  grid-area: dsc;
+}
 @media (min-width: 768px) {
   .page-header__grid {
     padding-top: 50px;
@@ -542,8 +642,15 @@ a {
     -ms-flex-pack: end;
     justify-content: flex-end;
   }
+  .card__description {
+    font-size: 18px;
+    line-height: 1.44;
+  }
+  .card__description {
+    font-size: 16px;
+    line-height: 1.38;
+  }
 }
-
 @media (min-width: 992px) {
   .slider {
     gap: 80px;
@@ -573,7 +680,7 @@ a {
 
     background-color: #f0145a;
   }
-  .slider__note.active {
+  .slider__note {
     max-width: 600px;
   }
   .slider__title {
@@ -590,8 +697,94 @@ a {
     padding-top: 80px;
     padding-bottom: 80px;
   }
-}
+  .services {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .services__title {
+    margin-bottom: 68px;
 
+    font-size: 42px;
+  }
+  .services__grid {
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 58px;
+  }
+}
+@media (min-width: 1280px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .card__title {
+    margin-bottom: 15px;
+
+    font-size: 24px;
+  }
+  .card__icon {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+
+    width: 92px;
+    height: 92px;
+    margin-bottom: 20px;
+  }
+  .card__img {
+    width: 64px;
+    height: 64px;
+  }
+  .card__img--size {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-width: 1279.8px) {
+  .card {
+    display: grid;
+
+    max-width: 100%;
+
+    gap: 10px;
+    grid-template-areas: "icon ttl" "dsc dsc";
+    grid-template-columns: 64px 1fr;
+  }
+  .card__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 18px;
+  }
+  .card__icon {
+    width: 64px;
+    height: 64px;
+  }
+  .card__img {
+    width: 45px;
+    height: 45px;
+  }
+  .card__img--size {
+    width: 36px;
+    height: 37px;
+  }
+}
 @media (max-width: 991.8px) {
   .slider {
     -webkit-box-orient: vertical;
@@ -643,8 +836,25 @@ a {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-}
+  .services {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .services__title {
+    margin-bottom: 20px;
 
+    font-size: 32px;
+  }
+}
+@media (max-width: 991.8px) and (min-width: 576px) {
+  .services__grid {
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 39px;
+  }
+}
 @media (max-width: 767.8px) {
   .page-header__grid {
     padding-top: 20px;
@@ -670,5 +880,11 @@ a {
   }
   .actions__socials {
     display: none;
+  }
+}
+@media (max-width: 575.8px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
   }
 }

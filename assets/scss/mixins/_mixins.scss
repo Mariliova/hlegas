@@ -1,29 +1,43 @@
 @use "../presets" as *;
 
 @mixin unlist() {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 @mixin visualy-hidden {
   position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
 
   white-space: nowrap;
+
+  border: 0;
+
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
-@mixin abs-position ($t:0, $r: 0, $b: 0,$l: 0) {
+@mixin abs-position ($t: 0, $l: 0, $r: 0, $b: 0) {
   position: absolute;
   top: $t;
   right: $r;
   bottom: $b;
   left: $l;
+}
+
+@mixin gradient ($gradient) {
+  background: linear-gradient($gradient);
+  -webkit-background-clip: text;
+          background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
 }

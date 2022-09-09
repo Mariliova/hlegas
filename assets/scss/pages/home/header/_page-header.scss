@@ -3,23 +3,29 @@
 
 .page-header {
   position: relative;
-  background: linear-gradient($bg-gradient-1);
+
   overflow: hidden;
+
+  background: linear-gradient($bg-gradient-1);
 
   &::before {
     content: "";
+
     background-image: url(../img/letters.svg);
     background-repeat: no-repeat;
     background-position: 50% 100%;
     background-size: 85vh;
+
     @include abs-position;
   }
 
   &::after {
     content: "";
+
     background: linear-gradient(180deg,
-        rgba(50, 50, 100, 0) 16.67%,
-        #323264 100%);
+    rgba(50, 50, 100, 0) 16.67%,
+    #323264 100%);
+
     @include abs-position(70%);
   }
 
@@ -31,18 +37,18 @@
     left: 0;
 
     display: grid;
-    gap: $gap;
-    grid-template-columns: auto 1fr;
 
     @extend %container;
-
+    gap: $gap;
+    grid-template-columns: auto 1fr;
     @include sm-min {
       padding-top: 50px;
+
       grid-template-areas: "logo actions""logo menu";
     }
-
     @include sm {
       padding-top: $gap;
+
       grid-template-areas: "actions actions""logo menu";
     }
   }
@@ -60,37 +66,43 @@
   }
 
   &__content {
-    @extend %container;
-    min-height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
+    min-height: 100vh;
+
+    @extend %container;
+
     &-img {
       position: absolute;
       bottom: 0;
+
       transform: scale(1.2);
     }
 
     &-title {
       position: relative;
-      font-size: 38px;
-      font-weight: 500;
+
+      max-width: 650px;
+      padding: $gap;
+
       text-align: center;
+
       color: $color-white;
 
-      padding: $gap;
-      max-width: 650px;
+      font-size: 38px;
+      font-weight: 500;
     }
   }
 
   &__button {
-    cursor: pointer;
     position: absolute;
+    z-index: 2;
     bottom: $gap;
     left: 50%;
+
+    cursor: pointer;
     transform: translateX(-50%);
-    z-index: 2;
   }
 }

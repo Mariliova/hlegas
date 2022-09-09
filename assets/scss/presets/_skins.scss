@@ -1,21 +1,17 @@
 $color-primary: #323264;
-$color-primary-alt: #46466E;
+$color-primary-alt: #46466e;
 $color-primary-soft: #686887;
-
 $color-accent: #f0145a;
-
 $color-active-regular: #24a3ff;
 $color-active-hover: #0085ff;
 $color-active-active: #006ccf;
-
 $color-bg-gray: #f5f5fa;
 $color-bg-gray-alt: #ededf7;
-
 $color-gray-text: #b3b3ba;
 $color-gray-separator: #e6e6f0;
-
 $color-white: #ffffff;
 $color-black: #000000;
-
 $bg-gradient-1: 42deg, $color-primary 15%, $color-primary 50%, #7a425e 88%;
-$bg-gradient-2: 90deg, #ef8080 0%, $color-accent 100%;
+$bg-gradient-2: 90deg, #ef8080 0, $color-accent 100%;
+$bg-gradient-3: 90deg, $color-accent 0, #ef8080 100%;
+$bg-gradient-4: 200deg, $color-primary 10%, $color-primary 55%, #643e72 90%;

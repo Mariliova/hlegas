@@ -3,14 +3,12 @@
 
 .actions {
   display: flex;
-
   align-items: center;
-  gap: $gap;
 
+  gap: $gap;
   @include sm-min {
     justify-content: flex-end;
   }
-
   @include sm {
     justify-content: space-between;
     a {
@@ -19,28 +17,30 @@
   }
 
   &__languages {
-    font-weight: 700;
-    font-size: 12px;
+    display: flex;
+
     letter-spacing: 1px;
 
-    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+
     gap: 2px;
 
     &-link {
-      border-radius: 8px;
-
       padding: 6px 5px;
 
+      border-radius: 8px;
+
       &.active {
-        background-color: $color-accent;
         color: $color-white;
+        background-color: $color-accent;
       }
     }
   }
 
   &__locations {
-    font-style: normal;
     font-size: 16px;
+    font-style: normal;
 
     @include sm {
       display: none;
@@ -48,8 +48,8 @@
   }
 
   &__numbers {
-    font-weight: 700;
     font-size: 16px;
+    font-weight: 700;
   }
 
   &__socials {
