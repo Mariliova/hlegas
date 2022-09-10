@@ -17,11 +17,15 @@
       position: relative;
 
       flex-direction: column;
+
+      min-width: 100%;
     }
   }
 
   &__secondary {
     display: flex;
+
+    min-width: 100%;
 
     @include sm {
       flex-direction: column;
@@ -40,12 +44,6 @@
     top: -59px;
 
     background-color: $color-bg-gray;
-  }
-}
-
-.case {
-  @include sm {
-    min-width: 100%;
   }
 }
 

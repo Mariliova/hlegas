@@ -1,0 +1,47 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.brands {
+  &__title {
+    padding-bottom: 30px;
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-primary;
+
+    font-size: 14px;
+
+    @extend %container;
+  }
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include xs {
+      overflow-x: hidden;
+
+      max-width: 187px;
+    }
+  }
+
+  &__img {
+    display: block;
+
+    @include sm {
+      height: 90px;
+    }
+  }
+}

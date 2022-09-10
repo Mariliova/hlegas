@@ -48,6 +48,10 @@
 
   border: 1px solid $color-white;
 
+  @include sm {
+    width: 100%;
+  }
+
   &__description {
     display: flex;
     align-items: flex-end;
