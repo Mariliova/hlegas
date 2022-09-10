@@ -1,0 +1,156 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.team {
+  @include sm-min {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  @include sm {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__grid {
+    display: grid;
+
+    border-radius: 12px;
+    background-color: $color-bg-gray;
+
+    @include md-min {
+      column-gap: 40px;
+      grid-template-areas: "pic con""pic ath";
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr;
+    }
+    @include md-sm {
+      grid-template-areas: "pic con""pic ath";
+      grid-template-columns: 350px auto;
+    }
+    @include sm {
+      padding-bottom: $gap;
+      padding-left: $gap;
+
+      grid-template-areas: "con con""pic ath";
+      grid-template-columns: auto 1fr;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-area: pic;
+    @include sm {
+      overflow: hidden;
+
+      width: 60px;
+      height: 60px;
+      margin-top: 10px;
+      margin-right: 10px;
+
+      border-radius: 120px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    @include md-sm {
+      width: 70%;
+    }
+  }
+
+
+  &__content {
+    grid-area: con;
+    @include sm-min {
+      margin-top: 40px;
+    }
+    @include sm {
+      margin-top: 20px;
+    }
+  }
+
+  &__page-link {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-active-regular;
+
+    font-size: 14px;
+
+    @include sm-min {
+      font-weight: 700;
+    }
+  }
+
+  &__quote {
+    max-width: 820px;
+    margin-right: 20px;
+
+    font-weight: 700;
+
+    @include md-min {
+      font-size: 42px;
+    }
+    @include md-sm {
+      font-size: 32px;
+    }
+    @include sm {
+      font-size: 32px;
+    }
+    @include gradient ($bg-gradient-3);
+  }
+
+  &__author {
+    margin-top: $gap;
+
+    color: $color-gray-text;
+
+    grid-area: ath;
+    @include md-sm {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+  }
+
+  &__position {
+    font-size: 16px;
+    line-height: 1.38;
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+
+    gap: 14px;
+    @include sm-min {
+      margin-top: $gap;
+    }
+    @include sm {
+      margin-top: 15px;
+    }
+  }
+
+  &__indicator {
+    width: 16px;
+    height: 16px;
+
+    opacity: 0.2;
+    border-radius: 8px;
+    background-color: $color-active-regular;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

@@ -5,17 +5,15 @@
   display: grid;
 
   @include md-min {
+    column-gap: 40px;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 58px;
-    column-gap: 40px;
   }
-
   @include md-xs {
+    column-gap: 25px;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 39px;
-    column-gap: 25px;
   }
-
   @include xs {
     grid-template-columns: 1fr;
     row-gap: 40px;
@@ -29,34 +27,36 @@
     display: flex;
     flex-direction: column;
   }
-
   @include lg {
     display: grid;
+
     max-width: 100%;
+
+    gap: 10px;
     grid-template-areas: "icon ttl""dsc dsc";
     grid-template-columns: 64px 1fr;
-    gap: 10px;
   }
 
 
   &__title {
     color: $color-active-regular;
 
+    grid-area: ttl;
     @include lg-min {
-      font-size: 24px;
       margin-bottom: 15px;
-    }
 
+      font-size: 24px;
+    }
     @include lg {
-      font-size: 18px;
-      margin: 0;
-      padding: 0;
       display: flex;
       align-self: center;
       justify-content: flex-start;
-    }
 
-    grid-area: ttl;
+      margin: 0;
+      padding: 0;
+
+      font-size: 18px;
+    }
   }
 
   &__icon {
@@ -64,31 +64,28 @@
     align-items: center;
     justify-content: center;
 
-    @include lg-min {
-      order: -1;
-      width: 92px;
-      height: 92px;
-      margin-bottom: 20px;
-    }
-
-    @include lg {
-      width: 64px;
-      height: 64px;
-    }
-
     border-radius: 24px;
     background-color: $color-white;
 
     grid-area: icon;
+    @include lg-min {
+      order: -1;
+
+      width: 92px;
+      height: 92px;
+      margin-bottom: 20px;
+    }
+    @include lg {
+      width: 64px;
+      height: 64px;
+    }
   }
 
   &__img {
-
     @include lg-min {
       width: 64px;
       height: 64px;
     }
-
     @include lg {
       width: 45px;
       height: 45px;
@@ -96,33 +93,28 @@
 
 
     &--size {
-
       @include lg-min {
         width: 42px;
         height: 42px;
       }
-
       @include lg {
         width: 36px;
         height: 37px;
       }
-
     }
   }
 
   &__description {
     color: $color-white;
 
+    grid-area: dsc;
     @include sm-min {
       font-size: 18px;
       line-height: 1.44;
     }
-
     @include sm-min {
       font-size: 16px;
       line-height: 1.38;
     }
-
-    grid-area: dsc;
   }
 }

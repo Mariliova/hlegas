@@ -17,6 +17,9 @@
     background-size: 85vh;
 
     @include abs-position;
+    @include sm {
+      opacity: 0;
+    }
   }
 
   &::after {
@@ -76,15 +79,20 @@
 
     &-img {
       position: absolute;
-      bottom: 0;
 
       transform: scale(1.2);
+
+      @include sm-min {
+        bottom: 0;
+      }
+      @include sm {
+        bottom: -15%;
+      }
     }
 
     &-title {
       position: relative;
 
-      max-width: 650px;
       padding: $gap;
 
       text-align: center;
@@ -93,6 +101,13 @@
 
       font-size: 38px;
       font-weight: 500;
+
+      @include sm-min {
+        max-width: 650px;
+      }
+      @include sm {
+        min-width: 375px;
+      }
     }
   }
 

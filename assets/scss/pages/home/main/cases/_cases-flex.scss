@@ -1,0 +1,108 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.cases {
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    border-radius: 12px;
+    background-color: $color-bg-gray;
+  }
+
+  &__primary {
+    display: flex;
+
+    @include sm {
+      position: relative;
+
+      flex-direction: column;
+    }
+  }
+
+  &__secondary {
+    display: flex;
+
+    @include sm {
+      flex-direction: column;
+    }
+  }
+}
+
+.cases__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  @include sm {
+    top: -59px;
+
+    background-color: $color-bg-gray;
+  }
+}
+
+.case {
+  @include sm {
+    min-width: 100%;
+  }
+}
+
+.case1 {
+  @include md-min {
+    position: relative;
+
+    padding-top: 105px;
+  }
+  @include md-sm {
+    position: relative;
+
+    padding-top: 70px;
+  }
+}
+
+.case2 {
+  @include md-min {
+    padding-top: 105px;
+  }
+  @include md-sm {
+    padding-top: 70px;
+  }
+}
+
+.case3 {
+  @include md-min {
+    padding-top: 105px;
+  }
+  @include md-sm {
+    padding-top: 70px;
+  }
+}
+
+.case4 {
+  @include md-min {
+    flex-basis: 320px;
+
+    padding-top: 20px;
+  }
+  @include md-sm {
+    padding-top: 56px;
+  }
+}
+
+.case5 {
+  @include md-min {
+    flex-basis: 453px;
+
+    padding-top: 56px;
+  }
+}
+
+.case6 {
+  @include md-min {
+    flex-basis: 547px;
+
+    padding-top: 56px;
+  }
+}
