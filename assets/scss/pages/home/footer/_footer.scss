@@ -1,0 +1,89 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.page-footer {
+  background-color: $color-bg-gray;
+  padding-bottom: 115px;
+  margin-top: -230px;
+  position: relative;
+
+  &__flex {
+    border-top: 4px solid $color-gray-separator;
+    padding-top: 32px;
+    @extend %container;
+    display: flex;
+    justify-content: space-between;
+
+    @include md {
+      flex-wrap: wrap;
+      gap: $gap;
+      justify-content: center;
+    }
+
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 420px;
+    align-items: center;
+
+    @include xs-min {
+      gap: $gap;
+    }
+
+
+    @include xs {
+      flex-direction: column;
+      gap: $gap-sm;
+    }
+  }
+
+  &__locations {
+    font-size: 16px;
+    font-weight: 500;
+    color: $color-primary;
+  }
+
+  &__locations-link {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active-regular;
+  }
+
+  &__numbers-link {
+    font-weight: 700;
+    font-size: 16px;
+    text-align: right;
+    color: $color-primary-alt;
+  }
+
+  &__emails-link {
+    font-weight: 700;
+    font-size: 16px;
+    color: $color-active-regular;
+  }
+
+  &__copyright {
+    font-size: 16px;
+    color: $color-gray-text;
+
+    @include sm-min {
+      text-align: right;
+    }
+
+    @include sm {
+      text-align: center;
+    }
+
+    @include xs {
+      max-width: 250px;
+    }
+  }
+}

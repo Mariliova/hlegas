@@ -1,0 +1,82 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.publications {
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 964px;
+    overflow: hidden;
+
+    @include sm-min {
+      gap: 40px;
+    }
+
+
+    @include xl-sm {
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    @include sm {
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: $gap;
+    }
+
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    &-pic {
+      order: -1;
+      max-width: 100%;
+      display: flex;
+    }
+
+    &:nth-of-type(1) {
+
+      @include sm {
+        order: 1;
+      }
+    }
+
+    &:nth-of-type(2) {
+      @include sm {
+        order: 3;
+      }
+    }
+
+    &:nth-of-type(3) {
+      @include xl-md {
+        @include visualy-hidden;
+      }
+
+      @include sm {
+        order: 2;
+      }
+    }
+
+    &:nth-of-type(4) {
+      @include sm {
+        @include visualy-hidden;
+      }
+    }
+
+    &:nth-of-type(5) {
+      @include xl {
+        @include visualy-hidden;
+      }
+    }
+
+    &:nth-of-type(6) {
+      @include sm {
+        @include visualy-hidden;
+      }
+    }
+  }
+}

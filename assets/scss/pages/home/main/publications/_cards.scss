@@ -1,0 +1,58 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.publications__card {
+
+
+  @include md-min {
+    max-width: 413px;
+  }
+
+  @include md {
+    max-width: 335px;
+  }
+
+  border-radius: 8px;
+  background-color: $color-white;
+
+  &-content {
+    padding: $gap;
+  }
+
+  &-img {
+    max-width: 100%;
+  }
+
+  &-ttl {
+    margin-bottom: 10px;
+  }
+
+  &-link {
+    font-size: 18px;
+    color: $color-active-regular;
+  }
+
+  &-date {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-gray-text;
+
+    @include md-min {
+      padding-bottom: $gap;
+      border-bottom: 4px solid $color-gray-separator;
+    }
+  }
+
+  &-description {
+    font-size: 16px;
+    line-height: 1.38;
+    color: $color-black;
+    margin-top: 10px;
+
+    @include md {
+      @include visualy-hidden;
+    }
+  }
+}

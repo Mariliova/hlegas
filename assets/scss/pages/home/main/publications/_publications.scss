@@ -1,0 +1,107 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.publications {
+  background-color: $color-bg-gray;
+  position: relative;
+
+  @include md-min {
+    padding-top: 40px;
+  }
+
+  @include md-sm {
+    padding-top: $gap;
+    padding-bottom: 130px
+  }
+
+  @include sm {
+    padding-top: $gap;
+    padding-bottom: 365px;
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    background: linear-gradient($bg-gradient-5);
+    height: 200px;
+    width: 100%;
+    z-index: 2;
+
+    @include md-min {
+      bottom: 21.2%;
+    }
+
+    @include md-sm {
+      bottom: 23.2%;
+    }
+
+    @include sm {
+      @include visualy-hidden;
+    }
+  }
+
+  &__text {
+
+    &-link {
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-active-regular;
+
+      @include xl-sm {
+        margin-left: $gap * 1.5;
+      }
+    }
+  }
+
+  &__title {
+
+    @include md-min {
+      margin-bottom: 40px;
+    }
+
+    @include xl-sm {
+      margin-left: $gap * 1.5;
+    }
+
+    @include md {
+      margin-bottom: $gap;
+    }
+
+    &-span {
+      font-weight: 700;
+
+      @include gradient ($bg-gradient-3);
+
+      @include sm-min {
+        font-size: 42px;
+      }
+
+      @include sm {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include sm-min {
+      top: 70%;
+    }
+
+    @include sm {
+      top: 72.5%;
+    }
+  }
+}
