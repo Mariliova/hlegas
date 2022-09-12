@@ -1698,9 +1698,9 @@ a {
     text-align: center;
   }
 }
-@media screen and (max-height: 720px) {
+@media screen and (max-height: 725px) {
   .page-header__content-img {
-    bottom: -12%;
+    bottom: -10%;
 
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
