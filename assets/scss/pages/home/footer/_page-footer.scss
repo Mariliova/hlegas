@@ -10,12 +10,20 @@
   background-color: $color-bg-gray;
 
   &__flex {
+    position: relative;
     display: flex;
     justify-content: space-between;
 
     padding-top: 32px;
 
-    border-top: 4px solid $color-gray-separator;
+&::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top:0;
+  height: 4px;
+  background-color: $color-gray-separator;
+}
 
     @extend %container;
     @include md {

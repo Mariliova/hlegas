@@ -6,6 +6,10 @@
   margin-right: auto;
   margin-left: auto;
 
+  @media screen and (min-width: $ul) {
+        margin-bottom: 60px;
+    }
+
   &__title {
     padding-bottom: 30px;
 
@@ -28,10 +32,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
+
+    @include xs-min {
+      max-width: 360px;
+    }
 
     @include xs {
-      overflow-x: hidden;
-
       max-width: 187px;
     }
   }
@@ -39,8 +46,25 @@
   &__img {
     display: block;
 
+
     @include sm {
       height: 90px;
     }
+
   }
+}
+
+@media screen and (min-width: $ul) {
+ .brands__img--radius1 {
+  border-radius: 12px 0 0 0 ;
+ }
+ .brands__img--radius2 {
+   border-radius: 0 12px 0 0;
+ }
+ .brands__img--radius3 {
+   border-radius: 0 0 0 12px;
+ }
+ .brands__img--radius4 {
+   border-radius: 0 0 12px 0;
+ }
 }

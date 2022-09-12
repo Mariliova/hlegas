@@ -3,8 +3,6 @@
 
 .publications {
   position: relative;
-
-  border-radius: 12px 12px 0 0;
   background-color: $color-bg-gray;
 
   @include md-min {
