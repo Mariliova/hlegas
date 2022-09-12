@@ -2,15 +2,16 @@
 @use "../../../../mixins" as *;
 
 .brands {
+  max-width: $ul;
+  margin-left: auto;
+  margin-right: auto;
+
   &__title {
     padding-bottom: 30px;
-
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
-
     color: $color-primary;
-
     font-size: 14px;
   }
 
@@ -18,9 +19,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-    max-width: 1440px;
-    margin: 0 auto;
   }
 
   &__picture {
@@ -30,7 +28,6 @@
 
     @include xs {
       overflow-x: hidden;
-
       max-width: 187px;
     }
   }
