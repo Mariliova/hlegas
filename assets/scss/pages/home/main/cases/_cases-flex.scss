@@ -6,15 +6,14 @@
     display: flex;
     flex-wrap: wrap;
 
+    background-color: $color-bg-gray;
+
     @include sm-min {
       border-radius: 12px;
     }
-
     @include sm {
       border-radius: 0 0 12px 12px;
     }
-
-    background-color: $color-bg-gray;
   }
 
   &__primary {

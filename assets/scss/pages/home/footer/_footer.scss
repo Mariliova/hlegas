@@ -2,86 +2,95 @@
 @use "../../../mixins" as *;
 
 .page-footer {
-  background-color: $color-bg-gray;
-  padding-bottom: 115px;
-  margin-top: -230px;
   position: relative;
 
+  margin-top: -230px;
+  padding-bottom: 115px;
+
+  background-color: $color-bg-gray;
+
   &__flex {
-    border-top: 4px solid $color-gray-separator;
-    padding-top: 32px;
-    @extend %container;
     display: flex;
     justify-content: space-between;
 
+    padding-top: 32px;
+
+    border-top: 4px solid $color-gray-separator;
+
+    @extend %container;
     @include md {
       flex-wrap: wrap;
-      gap: $gap;
       justify-content: center;
-    }
 
+      gap: $gap;
+    }
     @include sm {
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
     }
   }
 
   &__actions {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 420px;
     align-items: center;
+    flex-wrap: wrap;
+
+    max-width: 420px;
 
     @include xs-min {
       gap: $gap;
     }
-
-
     @include xs {
       flex-direction: column;
+
       gap: $gap-sm;
     }
   }
 
   &__locations {
+    color: $color-primary;
+
     font-size: 16px;
     font-weight: 500;
-    color: $color-primary;
   }
 
   &__locations-link {
-    font-weight: 700;
-    font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-active-regular;
+
+    font-size: 12px;
+    font-weight: 700;
   }
 
   &__numbers-link {
-    font-weight: 700;
-    font-size: 16px;
     text-align: right;
+
     color: $color-primary-alt;
+
+    font-size: 16px;
+    font-weight: 700;
   }
 
   &__emails-link {
-    font-weight: 700;
-    font-size: 16px;
     color: $color-active-regular;
+
+    font-size: 16px;
+    font-weight: 700;
   }
 
   &__copyright {
-    font-size: 16px;
     color: $color-gray-text;
+
+    font-size: 16px;
 
     @include sm-min {
       text-align: right;
     }
-
     @include sm {
       text-align: center;
     }
-
     @include xs {
       max-width: 250px;
     }

@@ -3,15 +3,18 @@
 
 .brands {
   max-width: $ul;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 
   &__title {
     padding-bottom: 30px;
+
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-primary;
+
     font-size: 14px;
   }
 
@@ -28,6 +31,7 @@
 
     @include xs {
       overflow-x: hidden;
+
       max-width: 187px;
     }
   }
