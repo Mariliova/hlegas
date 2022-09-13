@@ -13,10 +13,6 @@
 
   @include sm {
     justify-content: space-between;
-
-    a {
-      color: $color-gray-text;
-    }
   }
 
   &__languages {
@@ -31,11 +27,10 @@
 
     &-link {
       padding: 6px 5px;
-
       border-radius: 8px;
+      color: $color-white;
 
       &.active {
-        color: $color-white;
         background-color: $color-accent;
       }
 
@@ -60,6 +55,12 @@
   &__numbers {
     font-size: 16px;
     font-weight: 700;
+
+    @include sm {
+      a {
+          color: $color-gray-text;
+        }
+    }
   }
 
   &__socials {

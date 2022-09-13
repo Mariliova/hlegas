@@ -1,8 +1,9 @@
 /* JavaScript for menu*/
 $(document).ready(function () {
-  $('.header-navbar__hamburger').on('click', function () {
+  $('.menu__btn').on('click', function () {
     $(this).toggleClass('active');
-    $('.header-navbar__list').toggleClass('active');
+    $('.menu__list').toggleClass('menu__list-active');
+    // $('.menu__list-active').stop(true, true).slideToggle(500);
   });
 });
 

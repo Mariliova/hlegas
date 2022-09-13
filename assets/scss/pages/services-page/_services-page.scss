@@ -12,3 +12,16 @@
     margin-bottom: 30px;
   }
 }
+
+.services.services--normalize {
+  z-index: -1;
+}
+
+.pages-header__menu  .menu__list-active {
+  z-index: 2;
+  top: 17%;
+}
+
+.pages-header__menu .menu__btn {
+  z-index: 3;
+}

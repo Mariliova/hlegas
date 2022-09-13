@@ -18,7 +18,7 @@
 
     @include abs-position;
 
-    @include sm {
+    @include md {
       opacity: 0;
     }
   }
@@ -128,7 +128,13 @@
 
   &__button {
     position: absolute;
-    z-index: 2;
+    @include sm-min {
+      z-index: 2;
+    }
+    @include sm {
+      z-index: 1;
+    }
+
     bottom: $gap;
     left: 50%;
     border-radius: 50%;
