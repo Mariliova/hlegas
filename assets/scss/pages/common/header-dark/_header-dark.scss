@@ -17,6 +17,11 @@
       grid-template-areas: "logo actions""logo menu";
     }
 
+    @include md-sm {
+      padding-top: 50px;
+      grid-template-areas: "actions""logo""menu";
+    }
+
     @include sm {
       padding-top: $gap;
 
@@ -44,6 +49,9 @@
   &__grid {
     display: grid;
     grid-template-areas: "logo slash text leg";
+    @include md-sm {
+      justify-content: start;
+      }
   }
 
   &__link {
@@ -52,17 +60,30 @@
   }
 
   &__text {
-    font-size: 38px;
+    @include sm-min {
+      font-size: 38px;
+    }
     grid-area: text;
     font-weight: 400;
     color: $color-white;
+
+    @include sm {
+      font-size: 19px;
+    }
   }
 
   &__img-slash {
     grid-area: slash;
+    @include sm {
+      max-height: 24px;
+    }
   }
 
   &__img-leg {
     grid-area: leg;
+
+    @include sm {
+        max-height: 24px;
+      }
   }
 }

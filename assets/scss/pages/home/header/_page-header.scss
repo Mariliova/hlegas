@@ -46,10 +46,15 @@
     gap: $gap;
     grid-template-columns: auto 1fr;
 
-    @include sm-min {
+    @include md-min {
       padding-top: 50px;
 
       grid-template-areas: "logo actions""logo menu";
+    }
+
+    @include md-sm {
+      padding-top: 50px;
+      grid-template-areas: "actions""logo""menu";
     }
 
     @include sm {

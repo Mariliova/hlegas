@@ -401,6 +401,8 @@ a {
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
           transform: rotate(135deg);
+
+  background-color: #ec6f5d;
 }
 .menu__btn.active span:nth-of-type(2) {
   left: -40px;
@@ -413,6 +415,8 @@ a {
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
+
+  background-color: #ec6f5d;
 }
 .menu__list {
   margin: 0;
@@ -1139,7 +1143,6 @@ a {
 .logo__text {
   color: #ffffff;
 
-  font-size: 38px;
   font-weight: 400;
 
   grid-area: text;
@@ -1240,11 +1243,6 @@ a {
   }
 }
 @media (min-width: 768px) {
-  .page-header__grid {
-    padding-top: 50px;
-
-    grid-template-areas: "logo actions" "logo menu";
-  }
   .page-header__content-title {
     max-width: 650px;
   }
@@ -1252,7 +1250,22 @@ a {
     width: 155px;
   }
   .menu__btn {
-    display: none;
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    white-space: nowrap;
+
+    border: 0;
+
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
   }
   .menu__list {
     display: -webkit-box;
@@ -1314,6 +1327,9 @@ a {
 
     grid-template-areas: "logo actions" "logo menu";
   }
+  .logo__text {
+    font-size: 38px;
+  }
   .pages-footer__copyright {
     text-align: right;
   }
@@ -1323,6 +1339,11 @@ a {
   }
 }
 @media (min-width: 992px) {
+  .page-header__grid {
+    padding-top: 50px;
+
+    grid-template-areas: "logo actions" "logo menu";
+  }
   .slider {
     gap: 80px;
   }
@@ -1713,6 +1734,14 @@ a {
   }
 }
 @media (max-width: 991.8px) and (min-width: 768px) {
+  .page-header__grid {
+    padding-top: 50px;
+
+    grid-template-areas: "actions" "logo" "menu";
+  }
+  .menu {
+    justify-self: start;
+  }
   .team__grid {
     grid-template-areas: "pic con" "pic ath";
     grid-template-columns: 350px auto;
@@ -1746,6 +1775,16 @@ a {
   }
   .publications::before {
     bottom: 23.2%;
+  }
+  .pages-header__grid {
+    padding-top: 50px;
+
+    grid-template-areas: "actions" "logo" "menu";
+  }
+  .logo__grid {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
   }
 }
 @media (max-width: 767.8px) {
@@ -1966,6 +2005,15 @@ a {
     padding-top: 20px;
 
     grid-template-areas: "actions actions" "logo menu";
+  }
+  .logo__text {
+    font-size: 19px;
+  }
+  .logo__img-slash {
+    max-height: 24px;
+  }
+  .logo__img-leg {
+    max-height: 24px;
   }
   .pages-footer__flex {
     -webkit-box-align: center;
