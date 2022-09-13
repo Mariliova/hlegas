@@ -6,11 +6,14 @@
   align-items: center;
 
   gap: $gap;
+
   @include sm-min {
     justify-content: flex-end;
   }
+
   @include sm {
     justify-content: space-between;
+
     a {
       color: $color-gray-text;
     }
@@ -35,6 +38,13 @@
         color: $color-white;
         background-color: $color-accent;
       }
+
+      &:hover:not(.actions__languages-link.active) {
+        color: $color-primary;
+        background-color: $color-active-regular;
+        transition: 0.3s;
+      }
+
     }
   }
 
@@ -56,7 +66,16 @@
     margin-left: 5px;
 
     @include sm {
-      display: none;
+      @include visualy-hidden;
+    }
+
+    &-svg {
+      font-size: 24px;
+
+      &:hover {
+        color: $color-active-regular;
+        transition: 0.5s;
+      }
     }
   }
 }

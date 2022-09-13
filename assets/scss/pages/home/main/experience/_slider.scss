@@ -7,6 +7,7 @@
   @include md-min {
     gap: $gap * 4;
   }
+
   @include md {
     flex-direction: column;
   }
@@ -33,6 +34,7 @@
 
         background-color: $color-gray-separator;
       }
+
       @include md {
         display: none;
       }
@@ -49,6 +51,7 @@
 
       font-size: 42px;
     }
+
     @include md {
       display: none;
     }
@@ -79,6 +82,7 @@
 
           background-color: $color-accent;
         }
+
         @include md {
           display: none;
         }
@@ -122,6 +126,7 @@
     @include md-min {
       font-size: 32px;
     }
+
     @include md {
       margin-bottom: 15px;
 
@@ -134,6 +139,7 @@
       font-size: 21px;
       line-height: 1.43;
     }
+
     @include md {
       margin-bottom: $gap;
 
@@ -146,6 +152,7 @@
     @include md-min {
       display: none;
     }
+
     @include md {
       display: flex;
       justify-content: center;
@@ -161,6 +168,7 @@
     opacity: 0.2;
     border-radius: 8px;
     background-color: $color-active-regular;
+
 
     &.active {
       opacity: 1;

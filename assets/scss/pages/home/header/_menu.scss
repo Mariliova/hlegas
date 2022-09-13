@@ -68,13 +68,25 @@
 
   &__list {
     @include unlist;
+
     @include sm-min {
       display: flex;
 
       gap: 15px;
     }
+
     @include sm {
       display: none;
     }
+  }
+
+  &__link.active {
+    color: $color-white;
+    text-decoration: underline;
+  }
+
+  &__link:hover:not(.menu__link.active) {
+    color: $color-accent;
+    transition: 0.7s;
   }
 }

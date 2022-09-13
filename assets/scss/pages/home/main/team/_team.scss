@@ -6,6 +6,7 @@
     margin-top: 60px;
     margin-bottom: 40px;
   }
+
   @include sm {
     margin-top: 40px;
     margin-bottom: 30px;
@@ -27,10 +28,12 @@
       grid-template-columns: auto 1fr;
       grid-template-rows: auto 1fr;
     }
+
     @include md-sm {
       grid-template-areas: "pic con""pic ath";
       grid-template-columns: 350px auto;
     }
+
     @include sm {
       padding-bottom: $gap;
       padding-left: $gap;
@@ -46,6 +49,7 @@
     justify-content: center;
 
     grid-area: pic;
+
     @include sm {
       overflow: hidden;
 
@@ -69,9 +73,11 @@
 
   &__content {
     grid-area: con;
+
     @include sm-min {
       margin-top: 40px;
     }
+
     @include sm {
       margin-top: 20px;
     }
@@ -99,12 +105,15 @@
     @include md-min {
       font-size: 42px;
     }
+
     @include md-sm {
       font-size: 32px;
     }
+
     @include sm {
       font-size: 32px;
     }
+
     @include gradient ($bg-gradient-3);
   }
 
@@ -114,6 +123,7 @@
     color: $color-gray-text;
 
     grid-area: ath;
+
     @include md-sm {
       padding-bottom: 30px;
     }
@@ -133,9 +143,11 @@
     justify-content: center;
 
     gap: 14px;
+
     @include sm-min {
       margin-top: $gap;
     }
+
     @include sm {
       margin-top: 15px;
     }
@@ -148,9 +160,15 @@
     opacity: 0.2;
     border-radius: 8px;
     background-color: $color-active-regular;
+    cursor: pointer;
 
     &.active {
       opacity: 1;
+    }
+
+    &:hover:not(.slider__indicator.active) {
+      opacity: 0.6;
+      transition: 0.3s;
     }
   }
 }

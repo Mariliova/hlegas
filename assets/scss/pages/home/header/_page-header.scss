@@ -17,6 +17,7 @@
     background-size: 85vh;
 
     @include abs-position;
+
     @include sm {
       opacity: 0;
     }
@@ -26,8 +27,8 @@
     content: "";
 
     background: linear-gradient(180deg,
-    rgba(50, 50, 100, 0) 16.67%,
-    #323264 100%);
+        rgba(50, 50, 100, 0) 16.67%,
+        #323264 100%);
 
     @include abs-position(70%);
   }
@@ -44,11 +45,13 @@
     @extend %container;
     gap: $gap;
     grid-template-columns: auto 1fr;
+
     @include sm-min {
       padding-top: 50px;
 
       grid-template-areas: "logo actions""logo menu";
     }
+
     @include sm {
       padding-top: $gap;
 
@@ -111,6 +114,7 @@
       @include sm-min {
         max-width: 650px;
       }
+
       @include sm {
         min-width: 375px;
       }
@@ -122,8 +126,13 @@
     z-index: 2;
     bottom: $gap;
     left: 50%;
+    border-radius: 50%;
 
     cursor: pointer;
     transform: translateX(-50%);
+
+    &:hover {
+      box-shadow: 0 0 20px $color-primary-alt
+    }
   }
 }
