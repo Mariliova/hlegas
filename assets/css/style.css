@@ -434,7 +434,10 @@ a {
 
   list-style: none;
 }
-.menu__link__link:hover:not(.menu__link.active) {
+.menu__link.active {
+  color: #f0145a;
+}
+.menu__link:hover:not(.menu__link.active) {
   -webkit-transition: 0.7s;
        -o-transition: 0.7s;
           transition: 0.7s;
@@ -492,15 +495,22 @@ a {
 .actions__socials {
   margin-left: 5px;
 }
-.actions__socials-svg {
-  font-size: 24px;
+.actions__socials-link {
+  position: relative;
+  top: -13px;
 }
-.actions__socials-svg:hover {
+.actions__socials-svg {
+  position: absolute;
+  top: 0;
+
+  height: 24px;
+}
+.actions__socials-svg:nth-child(2):hover {
   -webkit-transition: 0.5s;
        -o-transition: 0.5s;
           transition: 0.5s;
 
-  color: #24a3ff;
+  opacity: 0;
 }
 
 .slider {
@@ -1103,17 +1113,23 @@ a {
   font-size: 16px;
 }
 
-.footer__socials-svg {
-  color: #24a3ff;
-
-  font-size: 38px;
+.footer__socials-link {
+  position: relative;
+  top: 0;
 }
-.footer__socials-svg:hover {
+.footer__socials-svg {
+  height: 38px;
+}
+.footer__socials-svg:nth-of-type(1) {
+  position: absolute;
+  top: -23px;
+}
+.footer__socials-svg:nth-child(1):hover {
   -webkit-transition: 0.5s;
        -o-transition: 0.5s;
           transition: 0.5s;
 
-  color: #f0145a;
+  opacity: 0;
 }
 
 .pages-header {
@@ -1299,8 +1315,6 @@ a {
   }
   .menu__link.active {
     text-decoration: underline;
-
-    color: #ffffff;
   }
   .actions {
     -webkit-box-pack: end;
@@ -1875,9 +1889,6 @@ a {
     background-color: #f5f5fa;
 
     font-size: 24px;
-  }
-  .menu__link.active {
-    color: #f0145a;
   }
   .actions {
     -webkit-box-pack: justify;

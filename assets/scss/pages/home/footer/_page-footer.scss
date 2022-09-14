@@ -73,10 +73,11 @@
 
     font-size: 12px;
     font-weight: 700;
+
     &:hover {
-        color: $color-accent;
-        transition: 0.5s;
-      }
+      color: $color-accent;
+      transition: 0.5s;
+    }
   }
 
   &__numbers-link {
@@ -93,10 +94,11 @@
 
     font-size: 16px;
     font-weight: 700;
+
     &:hover {
-        color: $color-accent;
-        transition: 0.5s;
-      }
+      color: $color-accent;
+      transition: 0.5s;
+    }
   }
 
   &__copyright {
@@ -118,12 +120,24 @@
   }
 }
 
-.footer__socials-svg {
-  font-size: 38px;
-    color: $color-active-regular;
+.footer__socials {
 
-    &:hover {
-      color: $color-accent;
+  &-link {
+    position: relative;
+    top: 0;
+  }
+
+  &-svg {
+    height: 38px;
+
+    &:nth-of-type(1) {
+      position: absolute;
+      top: -23px;
+    }
+
+    &:nth-child(1):hover {
+      opacity: 0;
       transition: 0.5s;
     }
+  }
 }

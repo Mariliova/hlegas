@@ -93,15 +93,15 @@
     &-active {
       @include sm {
         position: absolute;
-      z-index: -1;
-      top: 109%;
-      right: 1.5%;
-      left: 0%;
-      display: block;
-      padding: 64px $gap 100vh $gap;
-      text-align: center;
-      background-color: $color-white;
-      border-radius: 12px 12px 0 0;
+        z-index: -1;
+        top: 109%;
+        right: 1.5%;
+        left: 0%;
+        display: block;
+        padding: 64px $gap 100vh $gap;
+        text-align: center;
+        background-color: $color-white;
+        border-radius: 12px 12px 0 0;
       }
     }
 
@@ -119,21 +119,19 @@
     }
 
     &.active {
+      color: $color-accent;
 
       @include sm-min {
-        color: $color-white;
         text-decoration: underline;
       }
 
-      @include sm {
-        color: $color-accent;
-      }
-
     }
 
-    &__link:hover:not(.menu__link.active) {
-      color: $color-accent;
-      transition: 0.7s;
-    }
   }
+
+  &__link:hover:not(.menu__link.active) {
+    color: $color-accent;
+    transition: 0.7s;
+  }
+
 }
