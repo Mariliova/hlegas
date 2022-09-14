@@ -17,9 +17,12 @@
   z-index: -1;
 }
 
-.pages-header__menu  .menu__list-active {
+.pages-header__menu .menu__list-active {
   z-index: 2;
   top: 17%;
+  @media screen and (max-height: 525px){
+    top: 27%;
+  }
 }
 
 .pages-header__menu .menu__btn {

@@ -2209,20 +2209,26 @@ a {
   .menu__btn {
     display: block;
   }
+  .menu__btn.active span:nth-of-type(1) {
+    top: 267%;
+  }
+  .menu__btn.active span:nth-of-type(3) {
+    top: 267%;
+  }
   .menu__list {
     display: none;
   }
   .menu__list-active {
     position: absolute;
     z-index: -1;
-    top: 109%;
+    top: 100%;
     right: 0;
     left: 0;
 
     display: block;
     display: grid;
 
-    padding: 64px 20px 100vh 20px;
+    padding: 40px 20px 100vh 20px;
 
     text-align: center;
 
@@ -2289,5 +2295,8 @@ a {
 
     -webkit-clip-path: inset(100%);
             clip-path: inset(100%);
+  }
+  .pages-header__menu .menu__list-active {
+    top: 27%;
   }
 }

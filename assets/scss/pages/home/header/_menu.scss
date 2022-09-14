@@ -8,9 +8,9 @@
     justify-self: start;
   }
 
-     @media screen and (max-height: 525px){
-      justify-self: end;
-     }
+  @media screen and (max-height: 525px) {
+    justify-self: end;
+  }
 
   &__btn {
     position: relative;
@@ -67,6 +67,10 @@
         top: 370%;
         background-color: $color-dander;
         transform: rotate(135deg);
+
+        @media screen and (max-height: 525px) {
+          top: 267%;
+        }
       }
 
       &:nth-of-type(2) {
@@ -80,6 +84,10 @@
         top: 370%;
         background-color: $color-dander;
         transform: rotate(-135deg);
+
+        @media screen and (max-height: 525px) {
+          top: 267%;
+        }
       }
     }
   }
@@ -118,11 +126,11 @@
       @media screen and (max-height: 525px) {
         position: absolute;
         z-index: -1;
-        top: 109%;
+        top: 100%;
         right: 0%;
         left: 0%;
         display: block;
-        padding: 64px $gap 100vh $gap;
+        padding: 40px $gap 100vh $gap;
         text-align: center;
         background-color: $color-white;
         border-radius: 12px 12px 0 0;
