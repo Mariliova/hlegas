@@ -1328,10 +1328,6 @@ a {
     font-size: 18px;
     line-height: 1.44;
   }
-  .card__description {
-    font-size: 16px;
-    line-height: 1.38;
-  }
   .team {
     margin-top: 60px;
     margin-bottom: 40px;
@@ -1942,6 +1938,10 @@ a {
 
     -webkit-clip-path: inset(100%);
             clip-path: inset(100%);
+  }
+  .card__description {
+    font-size: 16px;
+    line-height: 1.38;
   }
   .team {
     margin-top: 40px;

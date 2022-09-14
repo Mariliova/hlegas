@@ -20,7 +20,8 @@
 .pages-header__menu .menu__list-active {
   z-index: 2;
   top: 17%;
-  @media screen and (max-height: 525px){
+
+  @media screen and (max-height: 525px) {
     top: 27%;
   }
 }
