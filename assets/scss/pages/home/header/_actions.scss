@@ -55,6 +55,7 @@
   &__numbers {
     font-size: 16px;
     font-weight: 700;
+    margin-right: 27px;
 
     @include sm {
       a {
@@ -64,14 +65,16 @@
   }
 
   &__socials {
-    margin-left: 5px;
 
     @include sm {
       @include visualy-hidden;
     }
 
     &-link {
+      display: block;
+
       position: relative;
+      left:-24px;
       top:-13px;
     }
 

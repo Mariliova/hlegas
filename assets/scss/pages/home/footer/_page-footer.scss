@@ -8,6 +8,7 @@
   padding-bottom: 115px;
 
   background-color: $color-bg-gray;
+  overflow: hidden;
 
   &__flex {
     position: relative;
@@ -132,7 +133,7 @@
 
     &:nth-of-type(1) {
       position: absolute;
-      top: -124%;
+      top: -118%;
     }
 
     &:nth-child(1):hover {
