@@ -8,6 +8,10 @@
     justify-self: start;
   }
 
+     @media screen and (max-height: 525px){
+      justify-self: end;
+     }
+
   &__btn {
     position: relative;
 
@@ -21,9 +25,12 @@
     cursor: pointer;
 
     @include sm-min {
-      @include visualy-hidden;
+      display: none;
     }
 
+    @media screen and (max-height: 525px) {
+      display: block;
+    }
 
     span {
       position: absolute;
@@ -90,6 +97,10 @@
       display: none;
     }
 
+    @media screen and (max-height: 525px) {
+      display: none;
+    }
+
     &-active {
       @include sm {
         position: absolute;
@@ -103,12 +114,38 @@
         background-color: $color-white;
         border-radius: 12px 12px 0 0;
       }
+
+      @media screen and (max-height: 525px) {
+        position: absolute;
+        z-index: -1;
+        top: 109%;
+        right: 0%;
+        left: 0%;
+        display: block;
+        padding: 64px $gap 100vh $gap;
+        text-align: center;
+        background-color: $color-white;
+        border-radius: 12px 12px 0 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+      }
     }
 
   }
 
   &__link {
     @include sm {
+      display: block;
+      margin-bottom: $gap;
+      color: $color-active-regular;
+      font-size: 24px;
+      background-color: $color-bg-gray;
+      border-radius: 12px;
+      padding: 5px;
+    }
+
+    @media screen and (max-height: 525px) {
       display: block;
       margin-bottom: $gap;
       color: $color-active-regular;

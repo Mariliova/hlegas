@@ -62,6 +62,12 @@
 
       grid-template-areas: "actions actions""logo menu";
     }
+
+        @media screen and (max-height: 525px){
+          padding-top: $gap;
+
+            grid-template-areas: "actions actions""logo menu";
+        }
   }
 
   &__logo {
@@ -102,6 +108,13 @@
 
         transform: scale(1);
       }
+
+      @media screen and (max-height: 525px) {
+        bottom: -34%;
+
+        transform: scale(0.7);
+      }
+
     }
 
     &-title {
@@ -128,9 +141,11 @@
 
   &__button {
     position: absolute;
+
     @include sm-min {
       z-index: 2;
     }
+
     @include sm {
       z-index: 1;
     }

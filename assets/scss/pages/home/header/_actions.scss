@@ -15,6 +15,10 @@
     justify-content: space-between;
   }
 
+  @media screen and (max-height: 525px) {
+    justify-content: space-between;
+  }
+
   &__languages {
     display: flex;
 
@@ -48,19 +52,30 @@
     font-style: normal;
 
     @include sm {
-      display: none;
+      @include visualy-hidden;
+    }
+
+    @media screen and (max-height: 525px) {
+      @include visualy-hidden;
     }
   }
 
   &__numbers {
     font-size: 16px;
     font-weight: 700;
-    margin-right: 27px;
+
+    @include sm-min {
+      margin-right: 27px;
+    }
+
+    @media screen and (max-height: 525px) {
+      margin-right: 0;
+    }
 
     @include sm {
       a {
-          color: $color-gray-text;
-        }
+        color: $color-gray-text;
+      }
     }
   }
 
@@ -70,17 +85,21 @@
       @include visualy-hidden;
     }
 
+    @media screen and (max-height: 525px) {
+      @include visualy-hidden;
+    }
+
     &-link {
       display: block;
 
       position: relative;
-      left:-24px;
-      top:-13px;
+      left: -24px;
+      top: -13px;
     }
 
     &-svg {
       position: absolute;
-      top:0;
+      top: 0;
       height: 24px;
 
 
