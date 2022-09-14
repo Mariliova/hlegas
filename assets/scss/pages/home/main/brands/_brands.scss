@@ -23,9 +23,22 @@
   }
 
   &__flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    display: grid;
+    @include sm-min {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+         @include sm-xs {
+           grid-template-columns: repeat(3, 1fr);
+         }
+                    @include xs {
+                      grid-template-columns: repeat(2, 1fr);
+                    }
+
+
   }
 
   &__picture {
@@ -34,21 +47,21 @@
     justify-content: center;
     overflow-x: hidden;
 
-    @include xs-min {
-      max-width: 360px;
-    }
+    // @include xs-min {
+    //   max-width: 360px;
+    // }
 
-    @include xs {
-      max-width: 187px;
-    }
+    // @include xs {
+    //   max-width: 188px;
+    // }
   }
 
   &__img {
     display: block;
 
 
-    @include sm {
-      height: 90px;
+    @include md {
+      height: 96px;
     }
 
   }

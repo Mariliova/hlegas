@@ -670,6 +670,9 @@ a {
 
   grid-area: ttl;
 }
+.card__title-link {
+  color: inherit;
+}
 .card__icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -748,6 +751,9 @@ a {
 .team__name {
   font-size: 18px;
 }
+.team__name-link {
+  color: inherit;
+}
 .team__position {
   font-size: 16px;
   line-height: 1.38;
@@ -789,6 +795,9 @@ a {
 
   border-bottom: 3px solid #ffffff;
 }
+.cases__title-link {
+  color: inherit;
+}
 .cases__ttl {
   -ms-flex-item-align: start;
   align-self: start;
@@ -802,6 +811,9 @@ a {
   color: #f0145a;
 
   font-size: 14px;
+}
+.cases__ttl-link {
+  color: inherit;
 }
 
 .case {
@@ -818,6 +830,9 @@ a {
   -ms-flex-align: end;
 
   color: #686887;
+}
+.case__description-link {
+  color: inherit;
 }
 .case__link {
   display: block;
@@ -877,14 +892,7 @@ a {
   font-size: 14px;
 }
 .brands__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: grid;
 }
 .brands__picture {
   display: -webkit-box;
@@ -1122,7 +1130,7 @@ a {
 }
 .footer__socials-svg:nth-of-type(1) {
   position: absolute;
-  top: -23px;
+  top: -124%;
 }
 .footer__socials-svg:nth-child(1):hover {
   -webkit-transition: 0.5s;
@@ -1267,9 +1275,6 @@ a {
 }
 
 @media (min-width: 576px) {
-  .brands__picture {
-    max-width: 360px;
-  }
   .page-footer__actions {
     gap: 20px;
   }
@@ -1351,6 +1356,9 @@ a {
   }
   .cases__flex {
     border-radius: 12px;
+  }
+  .brands__flex {
+    grid-template-columns: repeat(4, 1fr);
   }
   .publications__title-span {
     font-size: 42px;
@@ -1735,6 +1743,9 @@ a {
   .case__description {
     font-size: 18px;
   }
+  .brands__img {
+    height: 96px;
+  }
   .publications__title {
     margin-bottom: 20px;
   }
@@ -1983,9 +1994,6 @@ a {
 
     background-color: #f5f5fa;
   }
-  .brands__img {
-    height: 90px;
-  }
   .publications {
     padding-top: 20px;
     padding-bottom: 365px;
@@ -2118,6 +2126,12 @@ a {
   }
 }
 
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .brands__flex {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media screen and (max-height: 725px) {
   .page-header__content-img {
     bottom: -10%;
@@ -2133,8 +2147,8 @@ a {
     grid-template-columns: 1fr;
     row-gap: 40px;
   }
-  .brands__picture {
-    max-width: 187px;
+  .brands__flex {
+    grid-template-columns: repeat(2, 1fr);
   }
   .page-footer__actions {
     -webkit-box-orient: vertical;

@@ -6,6 +6,7 @@
     margin-top: 40px;
     margin-bottom: 30px;
   }
+
   @include sm {
     margin-top: 89px;
     margin-bottom: 30px;
@@ -23,8 +24,13 @@
     @include sm-min {
       border-radius: 12px 0 0 0;
     }
+
     @include sm {
       border-radius: 12px 12px 0 0;
+    }
+
+    &-link {
+      color: inherit;
     }
   }
 
@@ -40,6 +46,11 @@
     color: $color-accent;
 
     font-size: 14px;
+
+
+    &-link {
+      color: inherit;
+    }
   }
 }
 
@@ -61,8 +72,13 @@
     @include md-min {
       font-size: 24px;
     }
+
     @include md {
       font-size: 18px;
+    }
+
+    &-link {
+      color: inherit;
     }
   }
 

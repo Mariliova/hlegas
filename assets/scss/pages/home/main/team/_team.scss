@@ -131,6 +131,10 @@
 
   &__name {
     font-size: 18px;
+
+    &-link {
+      color: inherit;
+    }
   }
 
   &__position {
